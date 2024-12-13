@@ -52,7 +52,8 @@ public class SecurityConf {
 			.requestMatchers(HttpMethod.GET,"/vehículos").authenticated()
 			.requestMatchers(HttpMethod.GET,"/alquiler").authenticated()
 			.requestMatchers(HttpMethod.GET,"/pagos").authenticated()
-			.requestMatchers(HttpMethod.GET,"api/pets-vacum").hasAnyRole("STU")
+			.requestMatchers(HttpMethod.GET,"/statuscli").authenticated()
+			.requestMatchers(HttpMethod.GET,"/statusveh").authenticated()
 			.requestMatchers(HttpMethod.PUT,"api/pets").hasAnyRole("ADMIN")		
 			
 			)
