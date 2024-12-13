@@ -48,7 +48,10 @@ public class SecurityConf {
 		.authorizeHttpRequests(aut->
 			aut.requestMatchers(HttpMethod.POST,"api/pets").hasAnyRole("UNI")
 			.requestMatchers(HttpMethod.PUT,"api/pets-delete/{id}").hasAnyRole("ADMIN")
-			.requestMatchers(HttpMethod.GET,"api/pets").authenticated()
+			.requestMatchers(HttpMethod.GET,"/clientes").authenticated()
+			.requestMatchers(HttpMethod.GET,"/vehículos").authenticated()
+			.requestMatchers(HttpMethod.GET,"/alquiler").authenticated()
+			.requestMatchers(HttpMethod.GET,"/pagos").authenticated()
 			.requestMatchers(HttpMethod.GET,"api/pets-vacum").hasAnyRole("STU")
 			.requestMatchers(HttpMethod.PUT,"api/pets").hasAnyRole("ADMIN")		
 			
